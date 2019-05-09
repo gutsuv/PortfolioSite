@@ -25,7 +25,14 @@ a {
     align-items: flex-end;
     justify-content: center;
     margin-bottom: 40px;
+    border-radius: 4px;
+    overflow: hidden;
 } 
+
+.project-elim {
+    background-image: url("images/elim.png");
+    background-size: cover;
+}
 
 .project-camp {
     background-image: url("images/yelpcamp.png");
@@ -49,6 +56,8 @@ a {
     align-items: flex-end;
     justify-content: center;
     margin-bottom: 40px;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .project-text {
@@ -234,4 +243,111 @@ a {
     #portrait {
         margin-top: 200px;
     }
+}
+
+/* Found some very neat input animations at https://cssfx.dev/ */
+
+/* Nav-link animation */
+
+@media (min-width: 992px) {
+    .nav-animation {
+        position: relative;
+    }
+    
+    .nav-animation::before, .nav-animation::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background-color: white;
+        transform-origin: center;
+        transform: scaleY(0);
+        transition: transform 0.5s ease;
+    }
+    
+    .nav-animation::before {
+        left: 24px;
+    }
+    
+    .nav-animation::after {
+        right: 24px;
+    }
+    
+    .nav-animation:hover::before, .nav-animation:hover::after {
+        transform: scaleY(.5);
+    }
+}
+
+
+/* Input/textarea animation */
+
+input:focus, textarea:focus {
+    box-shadow: none !important;
+    border: none;
+    padding: 7px 13px;
+}
+
+.input-animation {
+    position: relative;
+}
+  
+.input-span {
+    position: absolute;
+    background-color: rgb(255, 104, 104);
+    transition: transform .5s ease;
+}
+  
+.bottom, .top {
+    height: 1px;
+    left: 0;
+    right: 0;
+    transform: scaleX(0);
+}
+  
+.left, .right {
+    width: 1px;
+    top: 0;
+    bottom: 0;
+    transform: scaleY(0);
+}
+  
+.bottom {
+    bottom: 0;
+    transform-origin: bottom right;
+}
+  
+input:focus ~ .bottom, textarea:focus ~ .bottom {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+}
+  
+.right {
+    right: 0;
+    transform-origin: top right;
+}
+  
+input:focus ~ .right, textarea:focus ~ .right {
+    transform-origin: bottom right;
+    transform: scaleY(1);
+}
+  
+.top {
+    top: 0;
+    transform-origin: top left;
+}
+  
+input:focus ~ .top, textarea:focus ~ .top {
+    transform-origin: top right;
+    transform: scaleX(1);
+}
+  
+.left {
+    left: 0;
+    transform-origin: bottom left;
+}
+  
+input:focus ~ .left, textarea:focus ~ .left {
+    transform-origin: top left;
+    transform: scaleY(1);
 }

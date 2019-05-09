@@ -23,7 +23,7 @@
         href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css?v=6" type="text/css">
+    <link rel="stylesheet" href="style.css?v=10" type="text/css">
 </head>
 
 <body>
@@ -38,16 +38,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a id="home-nav" class="active-nav nav-link nav-spacing-2 text-white">Home</a>
+                        <a id="home-nav" class="active-nav nav-link nav-spacing-2 text-white nav-animation">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a id="about-nav" class="nav-link nav-spacing text-white">About</a>
+                        <a id="about-nav" class="nav-link nav-spacing text-white nav-animation">About</a>
                     </li>
                     <li class="nav-item">
-                        <a id="port-nav" class="nav-link nav-spacing text-white">Portfolio</a>
+                        <a id="port-nav" class="nav-link nav-spacing text-white nav-animation">Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a id="contact-nav" class="nav-link nav-spacing text-white">Contact</a>
+                        <a id="contact-nav" class="nav-link nav-spacing text-white nav-animation">Contact</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto flex-row">
@@ -73,7 +73,7 @@
                     and a love for learning.
                 </p>
             </div>
-            
+
         </div>
         <div id="scroll-down" class="d-flex justify-content-center">
             <i id="scroll-down-icon" class="fas fa-chevron-circle-down fa-3x"></i>
@@ -92,9 +92,9 @@
                         <p class="pt-2">
                             &emsp;&emsp;Thanks for visiting! I'm Viktor Gutsu, an aspiring front-end developer, and a
                             recent graduate of Georgia Gwinnett College where I majored in Information Technology. I
-                            gained an interest for front-end development late into my degree but fell in love with it
-                            quickly. I enjoy learning new things each and every day and love helping others do the
-                            same. Nothing feels quite as exciting sometimes.
+                            gained an interest for front-end development while in school and fell in love with it
+                            quickly. I'm passionate about learning new things each and every day and love helping others
+                            do the same. Nothing feels quite as exciting.
                         </p>
                         <p>
                             &emsp;&emsp;When I'm not occupied by a computer, I prefer to spend my time outdoors, either
@@ -106,13 +106,14 @@
                         <div id="icons">
                             <i class="devicon-html5-plain-wordmark"></i>
                             <i class="devicon-css3-plain-wordmark"></i>
+                            <i class="devicon-sass-original"></i>
                             <i class="devicon-bootstrap-plain-wordmark"></i>
                             <i class="devicon-javascript-plain"></i>
                             <i class="devicon-jquery-plain-wordmark"></i>
                             <i class="devicon-java-plain-wordmark"></i>
                             <i class="devicon-nodejs-plain"></i>
-                            <i class="devicon-react-original-wordmark"></i>
                             <i class="devicon-git-plain-wordmark"></i>
+                            <i class="devicon-github-plain"></i>
                         </div>
                     </div>
                 </div>
@@ -126,6 +127,19 @@
             <div id="portfolio-content" class="text-center">
                 <h1>Portfolio</h1>
                 <div class="row mt-4">
+                    <div class="col-sm-6">
+                        <div class="project project-elim shadow">
+                            <a href="https://viktorgutsu.com/church/index.html">
+                                <div class="project-text">
+                                    <h3>Elim Church Website</h3>
+                                    <p class="pt-2">
+                                        Currently working on a website for Elim Romanian Pentacostal Church
+                                        of Lawrenceville to replace the current website.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                     <div class="col-sm-6">
                         <div class="project project-camp shadow">
                             <a href="https://vgutsu.herokuapp.com">
@@ -162,9 +176,10 @@
                                 <div class="project-text">
                                     <h3>BannerPro Extension</h3>
                                     <p class="pt-2">
-                                        The BannerPro extension, used by over 400 students at Georgia Gwinnett College,
+                                        The BannerPro extension, used by over 600 students at Georgia Gwinnett College,
                                         displays
-                                        professor ratings on class registration site. I was tasked with updating the
+                                        professor ratings on the course registration site. I was tasked with updating
+                                        the
                                         code to support
                                         the newly created registration site using a mix of CSS, JavaScript,
                                         jQuery, and the
@@ -172,16 +187,6 @@
                                     </p>
                                 </div>
                             </a>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="project-unfinished shadow">
-                            <div class="project-text">
-                                <h3>More to come</h3>
-                                <p class="pt-2">
-                                    I appreciate you hovering this div even if no project is listed here.
-                                </p>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -202,24 +207,50 @@
                     <div class="row">
                         <div class="col form-group">
                             <label for="name">Name</label>
-                            <input class="form-control" type="text" name="name" id="name" placeholder="Enter Name"
-                                required>
+                            <div class="input-animation">
+                                <input class="form-control" type="text" name="name" id="name" placeholder="Enter Name"
+                                    required>
+                                <span class="input-span bottom"></span>
+                                <span class="input-span right"></span>
+                                <span class="input-span top"></span>
+                                <span class="input-span left"></span>
+                            </div>
+
                         </div>
                         <div class="col form-group">
                             <label for="email">Email Address</label>
-                            <input class="form-control" type="email" name="email" id="email"
-                                placeholder="Enter Email Address" required>
+                            <div class="input-animation">
+                                <input class="form-control" type="email" name="email" id="email"
+                                    placeholder="Enter Email Address" required>
+                                <span class="input-span bottom"></span>
+                                <span class="input-span right"></span>
+                                <span class="input-span top"></span>
+                                <span class="input-span left"></span>
+                            </div>
+
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="subject">Subject</label>
-                        <input class="form-control" type="text" name="subject" id="subject"
-                            placeholder="Enter Message Subject" required>
+                        <div class="input-animation">
+                            <input class="form-control" type="text" name="subject" id="subject"
+                                placeholder="Enter Message Subject" required>
+                            <span class="input-span bottom"></span>
+                            <span class="input-span right"></span>
+                            <span class="input-span top"></span>
+                            <span class="input-span left"></span>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="textarea">Message</label>
-                        <textarea class="form-control" name="textarea" id="textarea" rows="7"
-                            placeholder="Enter Message" required></textarea>
+                        <div class="input-animation">
+                            <textarea class="form-control" name="textarea" id="textarea" rows="7"
+                                placeholder="Enter Message" required></textarea>
+                            <span class="input-span bottom"></span>
+                            <span class="input-span right"></span>
+                            <span class="input-span top"></span>
+                            <span class="input-span left"></span>
+                        </div>
                     </div>
 
                     <input type="hidden" name="_gotcha">
@@ -260,7 +291,7 @@
         crossorigin="anonymous"></script>
 
     <!-- JS File -->
-    <script src="port.js?v=3"></script>
+    <script src="port.js?v=5"></script>
 </body>
 
 </html>
